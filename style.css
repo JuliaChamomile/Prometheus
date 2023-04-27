@@ -1,50 +1,55 @@
 #blocksWrapper {
-    width: 100%;
-    background-color: rgba(20, 20, 20, 0.1);
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.1);
 }
 
 #first,
 #second,
 #third {
-    width: 10px;
-    height: 10px;
-    margin-top: 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
 }
 
 #first {
-    background-color: red;
+  background-color: red;
 }
 
 #second {
-    background-color: blue;
+  background-color: blue;
 }
 
 #third {
-    background-color: green;
+  background-color: green;
 }
 
-@media screen and(max-width: 1201px) {
-    #blocksWrapper {
-        border: 1px solid yellow;
-    }
-}
-
-@media screen and(max-width: 1025px), screen and(min-width: 1399px){
-    #first, #second{
-      width:50px;
-    }
-
-    #third{
-      width:75px;
-    }
-    
+@media screen and (max-width: 1201px) {
+  #blocksWrapper div {
+    border: 1px solid yellow;
   }
+}
+
+@media screen and (max-width: 1025px),
+screen and (min-width: 1399px) {
+
+  #first,
+  #second {
+    width: 50px;
+  }
+
+  #third {
+    width: 75px;
+  }
+}
 
 @media screen and (orientation: landscape) {
-    #blocksWrapper{
-        display: flex;
-        justify-content: space-between;
-    }
+  #blocksWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
+}
 
-
+#blocksWrapper {
+  width: 100%;
+}
