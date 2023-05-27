@@ -1,32 +1,27 @@
-// function exerrcise1(n) {
+export default {
+    subOptimal: function () {
+        // оптимізуйте код нижче таким чином, щоб уникнути дублювання завдяки використання функції reverseString
+        // будь-ласка, вносіть зміни тільки в межах, позначених лініями
+        // !! ВАЖЛИВО: Виклик reverseString здійснюйте за допомогою this: this.reverseString
 
-//     let number = n;
+        const strings = ['abcd', 'karamba', 'racecar'];
 
-//     while(number >= 1) {
+        // ========== Початок зони редагування ==============
 
-//         console.log(number);
+        const reversedStrings = [];
+          
+        strings.forEach(element => reversedStrings.push(this.reverseString(element)))   
+        
 
-//         number = number - 1;
+        return reversedStrings;
 
-//     }
-//     console.log('Start');
-// }
+        // ========== Кінець зони редагування ===============
+    },
 
+    reverseString: function (str) {
+        return str.split('').reverse().join('');
+    }
+};
 
-// function exerrcise1(a, b, c) {
-//     let number = a;
-//     while( a<=b) {
-//         if(number % c === 0) {
-//             console.log(number);
-//         }
-//         number = number + 1;
-//     }
-// }
-
-// function exerrcise1(b) {
-//     for (let i = 1; i <= b; i = i + 2) {
-//         console.log(i);
-//     }
-// }
 
 
