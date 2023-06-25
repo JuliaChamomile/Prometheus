@@ -69,5 +69,45 @@
 //     throw new Error("Очікується об'єкт");
 //   }
 
+// export const addObjectProperty = (object) => {
+//   let result;
 
+//   object.seniorityLevel = 'Junior';
+//   result = object;
+
+//   return result;
+// };
+
+// console.log(
+// addObjectProperty(
+//   { id: 4, name: 'name' }
+// )
+// );
+
+// export const objectProperties = (object) => {
+//   let result;
+
+  
+//  result = object.keys()
+  
+//   return result;
+// };
+
+// console.log(
+// objectProperties({ id: 2, name: 'name', isAdmin: false })
+// );
+
+// 8.23 checkbox = document.querySelector('input[type="checkbox"]')
+
+// checkbox.addEventListener('click', () => { 
+//   textElement = document.querySelector('.text')
+
+//   if (checkbox.checked) {
+//     textElement.classList.remove('hidden')
+//   }
+
+//   if (!checkbox.checked) {
+//     textElement.classList.add('hidden')
+//   }
+// })
 
