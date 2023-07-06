@@ -111,27 +111,73 @@
 //   }
 // })
 
-class Fish {
+// class Fish {
 
-    constructor(name, size) {
+//     constructor(name, size) {
 
-        this.name = name;
-        this.size = size;
-    }
+//         this.name = name;
+//         this.size = size;
+//     }
 
-    swim() {
-    }
+//     swim() {
+//     }
 
+// }
+
+// class Shark extends Fish {
+
+//     constructor(name, size, isDangerous) {
+
+//         super(name, size);
+//         this.isDangerous;
+
+//     }
+
+
+
+function createPromise(shouldFail = false) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (!shouldFail) {
+        resolve({message: "liuhyiu"});
+      } else {
+        reject({message: "liuhyiu"});
+      }
+    }, 100);
+  });
 }
- 
-class Shark extends Fish {
 
-    constructor(isDangerous) {
-        this.isDangerous;
-    }
-
-    attack() {
-    }
+async function handlePromise(mainAction, onSuccess, onError) {
+  await createPromise(true)
+  .then((sucess) => onSuccess(sucess))
+  .catch((onError) => onSuccess(onError))
 }
 
- export { Fish, Shark };
+function onSuccess(res) {
+  return res;
+}
+
+function onError(err) {
+  throw err;
+}
+
+// export { handlePromise, createPromise, onError, onSuccess };
+
+// export const successedPromise = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve('Successed'), 1000);
+//  });
+// };
+// export const failedPromise = () => {
+//   return new Promise((_resolve, reject) => {
+//     setTimeout(() => reject(new Error('Failed')), 2000);
+//  });
+// };
+// export const asyncFunc = async (promise) => {
+//  try {
+//    const result = await promise();
+//    return result;
+//  } catch (error) {
+//   throw new Error(error);
+//  };
+// }
