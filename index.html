@@ -7,16 +7,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Практичне завдання з CSS: Bootstrap</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    form,
+    form * {
+      display: block;
+    }
+  </style>
+
 </head>
+
 <body>
-  <div class="container">
-<div class="green">Item1</div>
-<div class="">Item2</div>
-<div class="">Item3</div>
-<div class="">Item4</div>
-<div class="">Item5</div>
-<div class="">Item6</div>
-<div class="">Item7</div>
-</div>
+  <form method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" required>
+    <label for="surname">Surname</label>
+    <input type="text" name="surname" required>
+    <p>Your Position</p>
+    <select name="" id="">
+      <option value="Select your position">Select your position</option>
+    </select>
+    <p>Describe yourself</p>
+    <textarea name="description" id="" cols="25" rows="5" placeholder="Write your description here"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <form action="">
+    <label for="name">What is your name?</label>
+    <input type="text" name="name" required placeholder="Name">
+    <fieldset>
+      <legend>What is your day today</legend>
+      <input type="checkbox" name="" value="">Good :)
+      <input type="checkbox" name="" value="">Bad :(
+        <input type="checkbox" name="" value="">Ok!
+    </fieldset>
+  </form>
 </body>
+
 </html>
